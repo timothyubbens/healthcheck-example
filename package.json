@@ -1,0 +1,17 @@
+{
+  "name": "healthcheck-example",
+  "version": "1.0.0",
+  "description": "Simple node healthcheck example",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2-docker process.yml --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": "https://github.com/timothyubbens/healthcheck-example.git",
+  "dependencies": {
+    "express": "^4.16.4",
+    "lightship": "^3.0.1",
+    "redis": "^2.8.0"
+  }
+}

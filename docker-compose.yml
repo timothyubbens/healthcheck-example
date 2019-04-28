@@ -1,0 +1,17 @@
+version: '2'
+services:
+  healthchecks-example:
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://cache
+      - PORT=8080
+      - ROARR_LOG=true
+  redis:
+    image: redis
+    expose:
+      - 6379
+    container_name: cache
